@@ -92,6 +92,7 @@ Once the minimal implementation is stable, Enclypt 2.0 will expand to include:
 ##  Contributions
 
 Currently under **active solo development**. Contributions, discussions, and testing feedback are welcome as the project progresses.
+You can reach me via [email](mailto:contact.shashipargaonkar@gmail.com) for any questions.
 
 ---
 
