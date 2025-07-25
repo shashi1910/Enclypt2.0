@@ -1,0 +1,93 @@
+# Rust build artifacts
+/target/
+**/*.rs.bk
+*.pdb
+
+# Cargo lock file (uncomment if you want to commit it)
+# Cargo.lock
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+logs/
+
+# Keys and sensitive data
+keys/*.key
+keys/*.pem
+keys/*.der
+*.key
+*.pem
+*.der
+!keys/.gitkeep
+!examples/keys/*.key
+
+# Test outputs
+test_outputs/
+benchmark_results/
+coverage/
+*.profraw
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.temp
+
+# Configuration overrides
+config/local.toml
+config/*.local.toml
+
+# Documentation build artifacts
+docs/book/
+docs/target/
+
+# Backup files
+*.bak
+*.backup
+
+# Editor artifacts
+.#*
+\#*#
+
+# Runtime artifacts
+*.pid
+*.sock
+
+# SSL certificates (if any)
+*.crt
+*.cert
+*.cer
+*.p12
+*.pfx
+
+# Database files (if any)
+*.db
+*.sqlite
+*.sqlite3
+
+# Node modules (if using any JS tools)
+node_modules/
+
+# Python cache (if using any Python tools)
+__pycache__/
+*.pyc
