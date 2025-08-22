@@ -19,16 +19,16 @@ fn benchmark_kyber_operations(c: &mut Criterion) {
     group.bench_function("encapsulation", |b| {
         let (kyber_keys, _) = generate_crypto_identity().unwrap();
         b.iter(|| {
-            let encapsulation = enclypt2::crypto::kyber_encapsulate(&kyber_keys.public_key).unwrap();
+            let encapsulation = enclypt2::crypto::encapsulate(&kyber_keys.public_key).unwrap();
             black_box(encapsulation);
         });
     });
     
     group.bench_function("decapsulation", |b| {
         let (kyber_keys, _) = generate_crypto_identity().unwrap();
-        let encapsulation = enclypt2::crypto::kyber_encapsulate(&kyber_keys.public_key).unwrap();
+        let encapsulation = enclypt2::crypto::encapsulate(&kyber_keys.public_key).unwrap();
         b.iter(|| {
-            let shared_secret = enclypt2::crypto::kyber_decapsulate(&kyber_keys.secret_key, &encapsulation.ciphertext).unwrap();
+            let shared_secret = enclypt2::crypto::decapsulate(&kyber_keys.secret_key, &encapsulation.ciphertext).unwrap();
             black_box(shared_secret);
         });
     });
@@ -50,7 +50,7 @@ fn benchmark_dilithium_operations(c: &mut Criterion) {
         let (_, dilithium_keys) = generate_crypto_identity().unwrap();
         let message = b"Test message for signing";
         b.iter(|| {
-            let signature = enclypt2::crypto::dilithium_sign(message, &dilithium_keys.secret_key).unwrap();
+            let signature = enclypt2::crypto::sign(message, &dilithium_keys.secret_key).unwrap();
             black_box(signature);
         });
     });
@@ -58,9 +58,9 @@ fn benchmark_dilithium_operations(c: &mut Criterion) {
     group.bench_function("verification", |b| {
         let (_, dilithium_keys) = generate_crypto_identity().unwrap();
         let message = b"Test message for signing";
-        let signature = enclypt2::crypto::dilithium_sign(message, &dilithium_keys.secret_key).unwrap();
+        let signature = enclypt2::crypto::sign(message, &dilithium_keys.secret_key).unwrap();
         b.iter(|| {
-            enclypt2::crypto::dilithium_verify(message, &signature, &dilithium_keys.public_key).unwrap();
+            enclypt2::crypto::verify(message, &signature, &dilithium_keys.public_key).unwrap();
         });
     });
     
@@ -81,7 +81,7 @@ fn benchmark_aes_operations(c: &mut Criterion) {
         let key = enclypt2::crypto::generate_aes_key().unwrap();
         let data = vec![42u8; 1024];
         b.iter(|| {
-            let (ciphertext, nonce) = enclypt2::crypto::aes_encrypt(&data, &key).unwrap();
+            let (ciphertext, nonce) = enclypt2::crypto::encrypt_data(&data, &key).unwrap();
             black_box((ciphertext, nonce));
         });
     });
@@ -89,9 +89,9 @@ fn benchmark_aes_operations(c: &mut Criterion) {
     group.bench_function("decryption_1kb", |b| {
         let key = enclypt2::crypto::generate_aes_key().unwrap();
         let data = vec![42u8; 1024];
-        let (ciphertext, nonce) = enclypt2::crypto::aes_encrypt(&data, &key).unwrap();
+        let (ciphertext, nonce) = enclypt2::crypto::encrypt_data(&data, &key).unwrap();
         b.iter(|| {
-            let plaintext = enclypt2::crypto::aes_decrypt(&ciphertext, &key, &nonce).unwrap();
+            let plaintext = enclypt2::crypto::decrypt_data(&ciphertext, &key, &nonce).unwrap();
             black_box(plaintext);
         });
     });
@@ -100,7 +100,7 @@ fn benchmark_aes_operations(c: &mut Criterion) {
         let key = enclypt2::crypto::generate_aes_key().unwrap();
         let data = vec![42u8; 1024 * 1024];
         b.iter(|| {
-            let (ciphertext, nonce) = enclypt2::crypto::aes_encrypt(&data, &key).unwrap();
+            let (ciphertext, nonce) = enclypt2::crypto::encrypt_data(&data, &key).unwrap();
             black_box((ciphertext, nonce));
         });
     });
@@ -108,9 +108,9 @@ fn benchmark_aes_operations(c: &mut Criterion) {
     group.bench_function("decryption_1mb", |b| {
         let key = enclypt2::crypto::generate_aes_key().unwrap();
         let data = vec![42u8; 1024 * 1024];
-        let (ciphertext, nonce) = enclypt2::crypto::aes_encrypt(&data, &key).unwrap();
+        let (ciphertext, nonce) = enclypt2::crypto::encrypt_data(&data, &key).unwrap();
         b.iter(|| {
-            let plaintext = enclypt2::crypto::aes_decrypt(&ciphertext, &key, &nonce).unwrap();
+            let plaintext = enclypt2::crypto::decrypt_data(&ciphertext, &key, &nonce).unwrap();
             black_box(plaintext);
         });
     });

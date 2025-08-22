@@ -48,6 +48,10 @@ tracing-subscriber = { version = "0.3", features = ["env-filter"] }
 tempfile = "3.8"
 dirs = "5.0"
 
+# Benchmarking
+criterion = { version = "0.5", features = ["html_reports"] }
+ctor = "0.2"
+
 # Web server (optional feature)
 axum = { version = "0.7", optional = true }
 tower = { version = "0.4", optional = true }
