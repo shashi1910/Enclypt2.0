@@ -1,0 +1,5 @@
+[build]
+rustflags = ["-C", "target-cpu=native"]
+
+[env]
+RUST_BACKTRACE = { value = "1", condition = { env_not_set = ["CI"] } }
