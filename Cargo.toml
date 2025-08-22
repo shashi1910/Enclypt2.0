@@ -2,17 +2,19 @@
 name = "enclypt2"
 version = "0.1.0"
 edition = "2021"
-authors = ["Your Name <your.email@example.com>"]
-description = "Post-quantum secure file transfer system using CRYSTALS-Kyber and CRYSTALS-Dilithium"
+authors = ["Enclypt Team"]
+description = "Post-Quantum Secure File Transfer System"
 license = "MIT"
-repository = "https://github.com/yourusername/enclypt2"
-keywords = ["cryptography", "post-quantum", "kyber", "dilithium", "file-transfer"]
+repository = "https://github.com/enclypt/enclypt2"
+keywords = ["cryptography", "post-quantum", "encryption", "security"]
 categories = ["cryptography", "command-line-utilities"]
 rust-version = "1.70"
 
 [dependencies]
 # Post-quantum cryptography
-liboqs = "0.9"
+pqcrypto-kyber = "0.7"
+pqcrypto-dilithium = "0.5"
+pqcrypto-traits = "0.3"
 
 # Symmetric encryption
 aes-gcm = "0.10"
@@ -21,7 +23,7 @@ aes-gcm = "0.10"
 rand = "0.8"
 hex = "0.4"
 sha2 = "0.10"
-blake3 = "1.5"
+base64 = "0.21"
 
 # CLI interface
 clap = { version = "4.4", features = ["derive"] }
@@ -33,16 +35,10 @@ tokio = { version = "1.0", features = ["full"] }
 serde = { version = "1.0", features = ["derive"] }
 serde_json = "1.0"
 bincode = "1.3"
-base64 = "0.21"
 
 # Error handling
 thiserror = "1.0"
 anyhow = "1.0"
-
-# Web server (optional)
-axum = { version = "0.7", optional = true }
-tower = { version = "0.4", optional = true }
-tower-http = { version = "0.5", features = ["cors", "fs"], optional = true }
 
 # Logging
 tracing = "0.1"
@@ -50,16 +46,12 @@ tracing-subscriber = { version = "0.3", features = ["env-filter"] }
 
 # File handling
 tempfile = "3.8"
-
-# Additional utilities
 dirs = "5.0"
-chrono = { version = "0.4", features = ["serde"] }
 
-[dev-dependencies]
-criterion = { version = "0.5", features = ["html_reports"] }
-tokio-test = "0.4"
-axum-test = "14.0"
-env_logger = "0.10"
+# Web server (optional feature)
+axum = { version = "0.7", optional = true }
+tower = { version = "0.4", optional = true }
+tower-http = { version = "0.5", features = ["cors", "fs"], optional = true }
 
 [features]
 default = ["cli"]
