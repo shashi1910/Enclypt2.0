@@ -31,14 +31,17 @@ Enclypt 2.0 is a complete post-quantum secure file transfer system that provides
 
 ```bash
 # Clone the repository
-git clone https://github.com/enclypt/enclypt2.git
-cd enclypt2
+git clone https://github.com/shashi1910/Enclypt2.0.git
+cd Enclypt2.0
 
-# Build the project
-cargo build --release
+# Install the CLI tool globally
+cargo install --path .
 
-# Run the CLI tool
-cargo run --bin enclypt2 -- --help
+# Add to PATH (if not already added)
+export PATH="$HOME/.cargo/bin:$PATH"
+
+# Test the installation
+enclypt2 --help
 ```
 
 ### Quick Demo
@@ -54,17 +57,17 @@ cargo run --example basic_encryption
 
 ```bash
 # Generate keys for Alice
-cargo run --bin enclypt2 -- keygen --name alice
+enclypt2 keygen --name alice
 
 # Generate keys for Bob
-cargo run --bin enclypt2 -- keygen --name bob
+enclypt2 keygen --name bob
 ```
 
 ### 2. Encrypt a File
 
 ```bash
 # Alice encrypts a file for Bob
-cargo run --bin enclypt2 -- encrypt \
+enclypt2 encrypt \
   --input secret_document.txt \
   --recipient-key bob_kyber_public.key \
   --sender-key alice_dilithium_secret.key \
@@ -75,7 +78,7 @@ cargo run --bin enclypt2 -- encrypt \
 
 ```bash
 # Bob decrypts the file from Alice
-cargo run --bin enclypt2 -- decrypt \
+enclypt2 decrypt \
   --input secret_document.enc \
   --recipient-key bob_kyber_secret.key \
   --sender-key alice_dilithium_public.key \
@@ -86,10 +89,10 @@ cargo run --bin enclypt2 -- decrypt \
 
 ```bash
 # Check available algorithms
-cargo run --bin enclypt2 -- algorithms
+enclypt2 algorithms
 
 # List available keys
-cargo run --bin enclypt2 -- list-keys
+enclypt2 list-keys
 ```
 
 ## 📚 Usage Examples
@@ -98,16 +101,16 @@ cargo run --bin enclypt2 -- list-keys
 
 ```bash
 # Show available commands
-cargo run --bin enclypt2 -- --help
+enclypt2 --help
 
 # Generate new key pairs
-cargo run --bin enclypt2 -- keygen --name myuser
+enclypt2 keygen --name myuser
 
 # List available key pairs
-cargo run --bin enclypt2 -- list-keys
+enclypt2 list-keys
 
 # Show cryptographic algorithm information
-cargo run --bin enclypt2 -- algorithms
+enclypt2 algorithms
 
 # Run the complete example
 cargo run --example basic_encryption
