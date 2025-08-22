@@ -409,10 +409,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 Support
 
-- **Issues**: [GitHub Issues](https://github.com/enclypt/enclypt2/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/enclypt/enclypt2/discussions)
-- **Documentation**: [API Docs](https://docs.rs/enclypt2)
-- **Security**: [Security Policy](SECURITY.md)
+Feel Free to reach out.
 
 ---
 
