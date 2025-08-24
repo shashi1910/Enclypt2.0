@@ -307,15 +307,15 @@
 //! 
 //! See the [examples](https://github.com/shashi1910/Enclypt2.0/tree/main/examples) directory for complete working examples of file processing operations.
 
-use std::path::{Path, PathBuf};
+use std::path::Path;
 use std::fs;
-use std::time::{SystemTime, UNIX_EPOCH};
+
 use tracing::{info, error, debug};
 
 use crate::crypto::{
-    CryptoResult, CryptoError, EncryptionResult, FileMetadata, KeyPair,
+    CryptoResult, CryptoError, EncryptionResult, FileMetadata,
     encapsulate, decapsulate, sign, verify, encrypt_data, decrypt_data,
-    derive_aes_key, generate_nonce, compute_data_hash,
+    derive_aes_key, compute_data_hash,
 };
 
 /// File processor for encryption and decryption operations
