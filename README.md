@@ -1,8 +1,7 @@
 # Enclypt 2.0: Post-Quantum Secure File Transfer System
 
-[![Rust](https://github.com/enclypt/enclypt2/workflows/Rust/badge.svg)](https://github.com/enclypt/enclypt2/actions)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Crates.io](https://img.shields.io/crates/v/enclypt2)](https://crates.io/crates/enclypt2)
+
 
 🔐 **Post-quantum secure file encryption and transfer using NIST-standardized algorithms**
 
@@ -409,10 +408,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 Support
 
-- **Issues**: [GitHub Issues](https://github.com/enclypt/enclypt2/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/enclypt/enclypt2/discussions)
-- **Documentation**: [API Docs](https://docs.rs/enclypt2)
-- **Security**: [Security Policy](SECURITY.md)
+Feel Free to reach out.
 
 ---
 

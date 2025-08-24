@@ -191,31 +191,6 @@ For files larger than 1 MB, the system demonstrates linear scaling:
 
 ---
 
-## Recommendations for Research Paper
-
-### Key Findings to Highlight
-
-1. **Post-Quantum Readiness:** Enclypt 2.0 provides quantum-resistant security with minimal performance overhead
-2. **Production Viability:** Sub-millisecond key generation makes the system suitable for real-world deployment
-3. **Scalability:** Linear performance scaling with file size demonstrates practical utility
-4. **Standards Compliance:** Full implementation of NIST-standardized algorithms ensures interoperability
-
-### Performance Metrics for Publication
-
-- **Key Generation:** 68 μs for both Kyber768 and Dilithium3
-- **File Encryption:** 140 μs for 1KB files, 9.4 ms for 1MB files
-- **Throughput:** 110+ MB/s for large files
-- **Memory Overhead:** 2,456 bytes per encrypted file
-- **Security Level:** 192-bit post-quantum security
-
-### Comparative Analysis Points
-
-1. **vs. Classical Cryptography:** Competitive performance with superior security
-2. **vs. Other PQ Systems:** Efficient implementation of standardized algorithms
-3. **vs. Traditional File Transfer:** Secure by default with minimal usability impact
-
----
-
 ## Conclusion
 
 Enclypt 2.0 demonstrates that post-quantum cryptography can be implemented efficiently without sacrificing performance or usability. The system achieves sub-millisecond key generation times and maintains high throughput for file processing operations, making it suitable for production deployment in environments requiring quantum-resistant security.
