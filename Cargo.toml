@@ -5,9 +5,12 @@ edition = "2021"
 authors = ["Enclypt Team"]
 description = "Post-Quantum Secure File Transfer System"
 license = "MIT"
-repository = "https://github.com/enclypt/enclypt2"
-keywords = ["cryptography", "post-quantum", "encryption", "security"]
-categories = ["cryptography", "command-line-utilities"]
+repository = "https://github.com/shashi1910/Enclypt2.0"
+documentation = "https://docs.rs/enclypt2"
+homepage = "https://github.com/shashi1910/Enclypt2.0"
+readme = "README.md"
+keywords = ["cryptography", "post-quantum", "encryption", "security", "kyber", "dilithium", "aes", "file-transfer"]
+categories = ["cryptography", "command-line-utilities", "security"]
 rust-version = "1.70"
 
 [dependencies]

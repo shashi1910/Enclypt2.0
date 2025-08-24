@@ -1,0 +1,12 @@
+Operation,Mean_Time_μs,Median_Time_μs,P95_Time_μs,P99_Time_μs,Data_Size_Bytes,Throughput
+kyber_key_generation,89.00,78.00,150.00,183.00,3584,11235.96
+dilithium_key_generation,68.00,67.00,75.00,89.00,5984,14705.88
+aes_key_generation,0.00,0.00,0.00,0.00,32,inf
+aes_encryption_64b,1.00,1.00,2.00,2.00,64,61.04
+aes_encryption_256b,2.00,2.00,3.00,3.00,256,122.07
+aes_encryption_1024b,6.00,6.00,7.00,11.00,1024,162.76
+aes_encryption_4096b,20.00,19.00,23.00,29.00,4096,195.31
+aes_encryption_16384b,76.00,74.00,84.00,97.00,16384,205.59
+aes_encryption_65536b,299.00,294.00,321.00,344.00,65536,209.03
+aes_encryption_262144b,1188.00,1181.00,1241.00,1269.00,262144,210.44
+aes_encryption_1048576b,4809.00,4754.00,4828.00,5066.00,1048576,207.94
