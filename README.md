@@ -2,7 +2,6 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-
 🔐 **Post-quantum secure file encryption and transfer using NIST-standardized algorithms**
 
 ✅ **Status: Fully Functional** - All tests passing (64/64) with complete CLI and library support
@@ -282,7 +281,38 @@ cargo bench --bench performance
 cargo run --example basic_encryption
 ```
 
-## 📊 Performance
+## 📊 Performance & Benchmarking
+
+### System-Aware Benchmarking
+
+Enclypt 2.0 includes a comprehensive benchmarking system that automatically captures system information and generates detailed performance reports:
+
+```bash
+# Run complete benchmark suite with system information
+./scripts/run_system_benchmarks.sh
+
+# View generated reports
+cat tests/benchmark_summary.md
+ls tests/benchmark_run_*/
+
+# Compare results across different systems
+python3 scripts/compare_benchmarks.py
+```
+
+**Features:**
+
+- 🔍 **Automatic system detection** (OS, CPU, memory, Rust version)
+- 📊 **Comprehensive metrics** (mean, median, percentiles, throughput)
+- 📁 **Multiple report formats** (JSON, TXT, CSV)
+- 🌐 **Cross-platform support** (Linux, macOS, Windows)
+- 📈 **Statistical analysis** with detailed comparisons
+
+**Generated Reports:**
+
+- `tests/system_info/system_details.txt` - Complete system information
+- `tests/enclypt2_benchmark_report_*.txt` - Comprehensive performance report
+
+For detailed benchmarking documentation, see [docs/BENCHMARKING.md](docs/BENCHMARKING.md).
 
 ### Cryptographic Operations
 
@@ -347,6 +377,12 @@ cargo test
 
 # Run benchmarks
 cargo bench
+
+# Run system-aware benchmarks with detailed reports
+./scripts/run_system_benchmarks.sh
+
+# Compare benchmark results across systems
+python3 scripts/compare_benchmarks.py
 
 # Check code quality
 cargo clippy

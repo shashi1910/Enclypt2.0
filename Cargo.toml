@@ -54,6 +54,8 @@ dirs = "5.0"
 # Benchmarking
 criterion = { version = "0.5", features = ["html_reports"] }
 ctor = "0.2"
+num_cpus = "1.16"
+chrono = { version = "0.4", features = ["serde"] }
 
 # Web server (optional feature)
 axum = { version = "0.7", optional = true }
@@ -77,6 +79,10 @@ required-features = ["server"]
 
 [[bench]]
 name = "performance"
+harness = false
+
+[[bench]]
+name = "system_aware_benchmarks"
 harness = false
 
 [profile.release]

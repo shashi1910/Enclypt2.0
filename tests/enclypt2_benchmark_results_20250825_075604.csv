@@ -1,0 +1,55 @@
+Test,Operation,Data_Size,Mean_us,Throughput_ops_per_sec,Throughput_MBps
+Kyber768,key_generation,N/A,69.00,14493,N/A
+Kyber768,encapsulation,N/A,27.00,37037,N/A
+Kyber768,decapsulation,N/A,30.00,33333,N/A
+Kyber768,key_derivation,N/A,0.00,inf,N/A
+Dilithium3,key_generation,N/A,74.00,13514,N/A
+Dilithium3,signing_64b,64B,111.00,9009,0.55
+Dilithium3,signing_256b,256B,49.00,20408,4.98
+Dilithium3,signing_1024b,1KB,110.00,9091,8.88
+Dilithium3,signing_4096b,4KB,144.00,6944,27.13
+Dilithium3,signing_16384b,16KB,125.00,8000,125.00
+Dilithium3,signing_65536b,64KB,208.00,4808,300.48
+Dilithium3,signing_262144b,256KB,700.00,1429,357.14
+Dilithium3,signing_1048576b,1MB,2718.00,368,367.92
+Dilithium3,verification_64b,64B,33.00,30303,1.85
+Dilithium3,verification_256b,256B,35.00,28571,6.98
+Dilithium3,verification_1024b,1KB,37.00,27027,26.39
+Dilithium3,verification_4096b,4KB,44.00,22727,88.78
+Dilithium3,verification_16384b,16KB,74.00,13514,211.15
+Dilithium3,verification_65536b,64KB,190.00,5263,328.95
+Dilithium3,verification_262144b,256KB,670.00,1493,373.13
+Dilithium3,verification_1048576b,1MB,2477.00,404,403.71
+AES-256-GCM,key_generation,N/A,0.00,inf,N/A
+AES-256-GCM,encryption_64b,64B,2.00,500000,30.52
+AES-256-GCM,encryption_256b,256B,2.00,500000,122.07
+AES-256-GCM,encryption_1024b,1KB,7.00,142857,139.51
+AES-256-GCM,encryption_4096b,4KB,22.00,45455,177.56
+AES-256-GCM,encryption_16384b,16KB,84.00,11905,186.01
+AES-256-GCM,encryption_65536b,64KB,331.00,3021,188.82
+AES-256-GCM,encryption_262144b,256KB,1343.00,745,186.15
+AES-256-GCM,encryption_1048576b,1MB,5342.00,187,187.20
+AES-256-GCM,decryption_64b,64B,1.00,1000000,61.04
+AES-256-GCM,decryption_256b,256B,2.00,500000,122.07
+AES-256-GCM,decryption_1024b,1KB,8.00,125000,122.07
+AES-256-GCM,decryption_4096b,4KB,20.00,50000,195.31
+AES-256-GCM,decryption_16384b,16KB,77.00,12987,202.92
+AES-256-GCM,decryption_65536b,64KB,313.00,3195,199.68
+AES-256-GCM,decryption_262144b,256KB,1241.00,806,201.45
+AES-256-GCM,decryption_1048576b,1MB,4907.00,204,203.79
+File Operations,encrypt_file_64b,64B,133.00,7519,0.46
+File Operations,encrypt_file_256b,256B,150.00,6667,1.63
+File Operations,encrypt_file_1024b,1KB,143.00,6993,6.83
+File Operations,encrypt_file_4096b,4KB,168.00,5952,23.25
+File Operations,encrypt_file_16384b,16KB,328.00,3049,47.64
+File Operations,encrypt_file_65536b,64KB,776.00,1289,80.54
+File Operations,encrypt_file_262144b,256KB,2504.00,399,99.84
+File Operations,encrypt_file_1048576b,1MB,10343.00,97,96.68
+File Operations,decrypt_file_64b,64B,65.00,15385,0.94
+File Operations,decrypt_file_256b,256B,66.00,15152,3.70
+File Operations,decrypt_file_1024b,1KB,73.00,13699,13.38
+File Operations,decrypt_file_4096b,4KB,105.00,9524,37.20
+File Operations,decrypt_file_16384b,16KB,228.00,4386,68.53
+File Operations,decrypt_file_65536b,64KB,673.00,1486,92.87
+File Operations,decrypt_file_262144b,256KB,2422.00,413,103.22
+File Operations,decrypt_file_1048576b,1MB,9289.00,108,107.65

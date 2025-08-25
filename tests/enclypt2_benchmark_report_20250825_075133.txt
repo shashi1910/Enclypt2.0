@@ -1,0 +1,909 @@
+🔐 Enclypt 2.0 Comprehensive Benchmark Report
+==============================================
+
+SYSTEM INFORMATION
+==================
+Timestamp: 2025-08-25T07:51:33.821618+00:00
+Hostname: Shashis-MacBook-Pro.local
+Username: shashipargaonkar
+OS: macos macOS 15.6.1
+Architecture: aarch64
+CPU: Apple M4 (10 cores)
+Memory: 16.0 GB
+Rust Version: rustc 1.88.0 (6b00bc388 2025-06-23) (Homebrew)
+Enclypt2 Version: 0.1.0
+
+TEST SUMMARY
+============
+Total Tests: 54
+Total Operations: 39600
+Average Throughput: inf ops/sec
+Fastest Operation: Kyber768 - key_derivation
+Slowest Operation: File Operations - encrypt_file_1048576b
+Total Duration: 270.00 seconds
+
+ALGORITHM INFORMATION
+=====================
+Enclypt 2.0 Cryptographic Stack:
+  CRYSTALS-Kyber768 (192 bits, PK: 1184B, SK: 2400B, CT: 1088B)
+  CRYSTALS-Dilithium3 (192 bits, PK: 1952B, SK: 4032B, SIG: 3309B)
+  AES-256-GCM (Key: 32B, Nonce: 12B, Tag: 16B)
+
+
+PERFORMANCE RESULTS
+==================
+
+Dilithium3 Tests
+=================
+Operation: key_generation
+Data Size: 0 bytes
+Mean Time: 74.00 μs
+Median Time: 69.00 μs
+95th Percentile: 103.00 μs
+99th Percentile: 153.00 μs
+Min Time: 66.00 μs
+Max Time: 227.00 μs
+Throughput: 13514 ops/sec
+Memory Usage: 5984 bytes
+Iterations: 1000
+Warmup Time: 2 seconds
+Measurement Time: 5 seconds
+
+Operation: signing_64b
+Data Size: 64 bytes
+Mean Time: 111.00 μs
+Median Time: 103.00 μs
+95th Percentile: 130.00 μs
+99th Percentile: 180.00 μs
+Min Time: 101.00 μs
+Max Time: 225.00 μs
+Throughput: 9009 ops/sec
+Data Throughput: 0.55 MB/s
+Memory Usage: 3309 bytes
+Iterations: 1000
+Warmup Time: 2 seconds
+Measurement Time: 5 seconds
+
+Operation: signing_256b
+Data Size: 256 bytes
+Mean Time: 49.00 μs
+Median Time: 42.00 μs
+95th Percentile: 75.00 μs
+99th Percentile: 110.00 μs
+Min Time: 41.00 μs
+Max Time: 168.00 μs
+Throughput: 20408 ops/sec
+Data Throughput: 4.98 MB/s
+Memory Usage: 3309 bytes
+Iterations: 1000
+Warmup Time: 2 seconds
+Measurement Time: 5 seconds
+
+Operation: signing_1024b
+Data Size: 1024 bytes
+Mean Time: 110.00 μs
+Median Time: 105.00 μs
+95th Percentile: 139.00 μs
+99th Percentile: 184.00 μs
+Min Time: 98.00 μs
+Max Time: 245.00 μs
+Throughput: 9091 ops/sec
+Data Throughput: 8.88 MB/s
+Memory Usage: 3309 bytes
+Iterations: 1000
+Warmup Time: 2 seconds
+Measurement Time: 5 seconds
+
+Operation: signing_4096b
+Data Size: 4096 bytes
+Mean Time: 144.00 μs
+Median Time: 134.00 μs
+95th Percentile: 171.00 μs
+99th Percentile: 241.00 μs
+Min Time: 130.00 μs
+Max Time: 367.00 μs
+Throughput: 6944 ops/sec
+Data Throughput: 27.13 MB/s
+Memory Usage: 3309 bytes
+Iterations: 1000
+Warmup Time: 2 seconds
+Measurement Time: 5 seconds
+
+Operation: signing_16384b
+Data Size: 16384 bytes
+Mean Time: 125.00 μs
+Median Time: 116.00 μs
+95th Percentile: 146.00 μs
+99th Percentile: 190.00 μs
+Min Time: 112.00 μs
+Max Time: 370.00 μs
+Throughput: 8000 ops/sec
+Data Throughput: 125.00 MB/s
+Memory Usage: 3309 bytes
+Iterations: 1000
+Warmup Time: 2 seconds
+Measurement Time: 5 seconds
+
+Operation: signing_65536b
+Data Size: 65536 bytes
+Mean Time: 208.00 μs
+Median Time: 198.00 μs
+95th Percentile: 262.00 μs
+99th Percentile: 315.00 μs
+Min Time: 185.00 μs
+Max Time: 402.00 μs
+Throughput: 4808 ops/sec
+Data Throughput: 300.48 MB/s
+Memory Usage: 3309 bytes
+Iterations: 1000
+Warmup Time: 2 seconds
+Measurement Time: 5 seconds
+
+Operation: signing_262144b
+Data Size: 262144 bytes
+Mean Time: 700.00 μs
+Median Time: 648.00 μs
+95th Percentile: 916.00 μs
+99th Percentile: 1101.00 μs
+Min Time: 621.00 μs
+Max Time: 1422.00 μs
+Throughput: 1429 ops/sec
+Data Throughput: 357.14 MB/s
+Memory Usage: 3309 bytes
+Iterations: 1000
+Warmup Time: 2 seconds
+Measurement Time: 5 seconds
+
+Operation: signing_1048576b
+Data Size: 1048576 bytes
+Mean Time: 2718.00 μs
+Median Time: 2638.00 μs
+95th Percentile: 3327.00 μs
+99th Percentile: 3780.00 μs
+Min Time: 2367.00 μs
+Max Time: 5040.00 μs
+Throughput: 368 ops/sec
+Data Throughput: 367.92 MB/s
+Memory Usage: 3309 bytes
+Iterations: 1000
+Warmup Time: 2 seconds
+Measurement Time: 5 seconds
+
+Operation: verification_64b
+Data Size: 64 bytes
+Mean Time: 33.00 μs
+Median Time: 32.00 μs
+95th Percentile: 37.00 μs
+99th Percentile: 56.00 μs
+Min Time: 31.00 μs
+Max Time: 121.00 μs
+Throughput: 30303 ops/sec
+Data Throughput: 1.85 MB/s
+Iterations: 1000
+Warmup Time: 2 seconds
+Measurement Time: 5 seconds
+
+Operation: verification_256b
+Data Size: 256 bytes
+Mean Time: 35.00 μs
+Median Time: 33.00 μs
+95th Percentile: 40.00 μs
+99th Percentile: 59.00 μs
+Min Time: 32.00 μs
+Max Time: 105.00 μs
+Throughput: 28571 ops/sec
+Data Throughput: 6.98 MB/s
+Iterations: 1000
+Warmup Time: 2 seconds
+Measurement Time: 5 seconds
+
+Operation: verification_1024b
+Data Size: 1024 bytes
+Mean Time: 37.00 μs
+Median Time: 37.00 μs
+95th Percentile: 41.00 μs
+99th Percentile: 56.00 μs
+Min Time: 34.00 μs
+Max Time: 115.00 μs
+Throughput: 27027 ops/sec
+Data Throughput: 26.39 MB/s
+Iterations: 1000
+Warmup Time: 2 seconds
+Measurement Time: 5 seconds
+
+Operation: verification_4096b
+Data Size: 4096 bytes
+Mean Time: 44.00 μs
+Median Time: 41.00 μs
+95th Percentile: 49.00 μs
+99th Percentile: 75.00 μs
+Min Time: 40.00 μs
+Max Time: 149.00 μs
+Throughput: 22727 ops/sec
+Data Throughput: 88.78 MB/s
+Iterations: 1000
+Warmup Time: 2 seconds
+Measurement Time: 5 seconds
+
+Operation: verification_16384b
+Data Size: 16384 bytes
+Mean Time: 74.00 μs
+Median Time: 74.00 μs
+95th Percentile: 82.00 μs
+99th Percentile: 115.00 μs
+Min Time: 67.00 μs
+Max Time: 170.00 μs
+Throughput: 13514 ops/sec
+Data Throughput: 211.15 MB/s
+Iterations: 1000
+Warmup Time: 2 seconds
+Measurement Time: 5 seconds
+
+Operation: verification_65536b
+Data Size: 65536 bytes
+Mean Time: 190.00 μs
+Median Time: 187.00 μs
+95th Percentile: 207.00 μs
+99th Percentile: 277.00 μs
+Min Time: 176.00 μs
+Max Time: 375.00 μs
+Throughput: 5263 ops/sec
+Data Throughput: 328.95 MB/s
+Iterations: 1000
+Warmup Time: 2 seconds
+Measurement Time: 5 seconds
+
+Operation: verification_262144b
+Data Size: 262144 bytes
+Mean Time: 670.00 μs
+Median Time: 638.00 μs
+95th Percentile: 804.00 μs
+99th Percentile: 876.00 μs
+Min Time: 611.00 μs
+Max Time: 1022.00 μs
+Throughput: 1493 ops/sec
+Data Throughput: 373.13 MB/s
+Iterations: 1000
+Warmup Time: 2 seconds
+Measurement Time: 5 seconds
+
+Operation: verification_1048576b
+Data Size: 1048576 bytes
+Mean Time: 2477.00 μs
+Median Time: 2410.00 μs
+95th Percentile: 2760.00 μs
+99th Percentile: 3066.00 μs
+Min Time: 2356.00 μs
+Max Time: 3434.00 μs
+Throughput: 404 ops/sec
+Data Throughput: 403.71 MB/s
+Iterations: 1000
+Warmup Time: 2 seconds
+Measurement Time: 5 seconds
+
+File Operations Tests
+======================
+Operation: encrypt_file_64b
+Data Size: 64 bytes
+Mean Time: 133.00 μs
+Median Time: 115.00 μs
+95th Percentile: 272.00 μs
+99th Percentile: 293.00 μs
+Min Time: 78.00 μs
+Max Time: 293.00 μs
+Throughput: 7519 ops/sec
+Data Throughput: 0.46 MB/s
+Memory Usage: 4489 bytes
+Iterations: 100
+Warmup Time: 2 seconds
+Measurement Time: 5 seconds
+
+Operation: encrypt_file_256b
+Data Size: 256 bytes
+Mean Time: 150.00 μs
+Median Time: 129.00 μs
+95th Percentile: 289.00 μs
+99th Percentile: 347.00 μs
+Min Time: 81.00 μs
+Max Time: 347.00 μs
+Throughput: 6667 ops/sec
+Data Throughput: 1.63 MB/s
+Memory Usage: 4681 bytes
+Iterations: 100
+Warmup Time: 2 seconds
+Measurement Time: 5 seconds
+
+Operation: encrypt_file_1024b
+Data Size: 1024 bytes
+Mean Time: 143.00 μs
+Median Time: 135.00 μs
+95th Percentile: 266.00 μs
+99th Percentile: 554.00 μs
+Min Time: 87.00 μs
+Max Time: 554.00 μs
+Throughput: 6993 ops/sec
+Data Throughput: 6.83 MB/s
+Memory Usage: 5449 bytes
+Iterations: 100
+Warmup Time: 2 seconds
+Measurement Time: 5 seconds
+
+Operation: encrypt_file_4096b
+Data Size: 4096 bytes
+Mean Time: 168.00 μs
+Median Time: 152.00 μs
+95th Percentile: 301.00 μs
+99th Percentile: 427.00 μs
+Min Time: 113.00 μs
+Max Time: 427.00 μs
+Throughput: 5952 ops/sec
+Data Throughput: 23.25 MB/s
+Memory Usage: 8521 bytes
+Iterations: 100
+Warmup Time: 2 seconds
+Measurement Time: 5 seconds
+
+Operation: encrypt_file_16384b
+Data Size: 16384 bytes
+Mean Time: 328.00 μs
+Median Time: 308.00 μs
+95th Percentile: 483.00 μs
+99th Percentile: 805.00 μs
+Min Time: 233.00 μs
+Max Time: 805.00 μs
+Throughput: 3049 ops/sec
+Data Throughput: 47.64 MB/s
+Memory Usage: 20809 bytes
+Iterations: 100
+Warmup Time: 2 seconds
+Measurement Time: 5 seconds
+
+Operation: encrypt_file_65536b
+Data Size: 65536 bytes
+Mean Time: 776.00 μs
+Median Time: 760.00 μs
+95th Percentile: 981.00 μs
+99th Percentile: 1488.00 μs
+Min Time: 641.00 μs
+Max Time: 1488.00 μs
+Throughput: 1289 ops/sec
+Data Throughput: 80.54 MB/s
+Memory Usage: 69961 bytes
+Iterations: 100
+Warmup Time: 2 seconds
+Measurement Time: 5 seconds
+
+Operation: encrypt_file_262144b
+Data Size: 262144 bytes
+Mean Time: 2504.00 μs
+Median Time: 2476.00 μs
+95th Percentile: 2779.00 μs
+99th Percentile: 3015.00 μs
+Min Time: 2326.00 μs
+Max Time: 3015.00 μs
+Throughput: 399 ops/sec
+Data Throughput: 99.84 MB/s
+Memory Usage: 266569 bytes
+Iterations: 100
+Warmup Time: 2 seconds
+Measurement Time: 5 seconds
+
+Operation: encrypt_file_1048576b
+Data Size: 1048576 bytes
+Mean Time: 10343.00 μs
+Median Time: 9695.00 μs
+95th Percentile: 12177.00 μs
+99th Percentile: 45042.00 μs
+Min Time: 9340.00 μs
+Max Time: 45042.00 μs
+Throughput: 97 ops/sec
+Data Throughput: 96.68 MB/s
+Memory Usage: 1053001 bytes
+Iterations: 100
+Warmup Time: 2 seconds
+Measurement Time: 5 seconds
+
+Operation: decrypt_file_64b
+Data Size: 64 bytes
+Mean Time: 65.00 μs
+Median Time: 63.00 μs
+95th Percentile: 71.00 μs
+99th Percentile: 136.00 μs
+Min Time: 63.00 μs
+Max Time: 136.00 μs
+Throughput: 15385 ops/sec
+Data Throughput: 0.94 MB/s
+Memory Usage: 64 bytes
+Iterations: 100
+Warmup Time: 2 seconds
+Measurement Time: 5 seconds
+
+Operation: decrypt_file_256b
+Data Size: 256 bytes
+Mean Time: 66.00 μs
+Median Time: 65.00 μs
+95th Percentile: 71.00 μs
+99th Percentile: 94.00 μs
+Min Time: 65.00 μs
+Max Time: 94.00 μs
+Throughput: 15152 ops/sec
+Data Throughput: 3.70 MB/s
+Memory Usage: 256 bytes
+Iterations: 100
+Warmup Time: 2 seconds
+Measurement Time: 5 seconds
+
+Operation: decrypt_file_1024b
+Data Size: 1024 bytes
+Mean Time: 73.00 μs
+Median Time: 71.00 μs
+95th Percentile: 75.00 μs
+99th Percentile: 147.00 μs
+Min Time: 71.00 μs
+Max Time: 147.00 μs
+Throughput: 13699 ops/sec
+Data Throughput: 13.38 MB/s
+Memory Usage: 1024 bytes
+Iterations: 100
+Warmup Time: 2 seconds
+Measurement Time: 5 seconds
+
+Operation: decrypt_file_4096b
+Data Size: 4096 bytes
+Mean Time: 105.00 μs
+Median Time: 98.00 μs
+95th Percentile: 180.00 μs
+99th Percentile: 206.00 μs
+Min Time: 97.00 μs
+Max Time: 206.00 μs
+Throughput: 9524 ops/sec
+Data Throughput: 37.20 MB/s
+Memory Usage: 4096 bytes
+Iterations: 100
+Warmup Time: 2 seconds
+Measurement Time: 5 seconds
+
+Operation: decrypt_file_16384b
+Data Size: 16384 bytes
+Mean Time: 228.00 μs
+Median Time: 205.00 μs
+95th Percentile: 396.00 μs
+99th Percentile: 539.00 μs
+Min Time: 201.00 μs
+Max Time: 539.00 μs
+Throughput: 4386 ops/sec
+Data Throughput: 68.53 MB/s
+Memory Usage: 16384 bytes
+Iterations: 100
+Warmup Time: 2 seconds
+Measurement Time: 5 seconds
+
+Operation: decrypt_file_65536b
+Data Size: 65536 bytes
+Mean Time: 673.00 μs
+Median Time: 639.00 μs
+95th Percentile: 875.00 μs
+99th Percentile: 1057.00 μs
+Min Time: 619.00 μs
+Max Time: 1057.00 μs
+Throughput: 1486 ops/sec
+Data Throughput: 92.87 MB/s
+Memory Usage: 65536 bytes
+Iterations: 100
+Warmup Time: 2 seconds
+Measurement Time: 5 seconds
+
+Operation: decrypt_file_262144b
+Data Size: 262144 bytes
+Mean Time: 2422.00 μs
+Median Time: 2350.00 μs
+95th Percentile: 2837.00 μs
+99th Percentile: 3456.00 μs
+Min Time: 2288.00 μs
+Max Time: 3456.00 μs
+Throughput: 413 ops/sec
+Data Throughput: 103.22 MB/s
+Memory Usage: 262144 bytes
+Iterations: 100
+Warmup Time: 2 seconds
+Measurement Time: 5 seconds
+
+Operation: decrypt_file_1048576b
+Data Size: 1048576 bytes
+Mean Time: 9289.00 μs
+Median Time: 9208.00 μs
+95th Percentile: 9765.00 μs
+99th Percentile: 10811.00 μs
+Min Time: 9108.00 μs
+Max Time: 10811.00 μs
+Throughput: 108 ops/sec
+Data Throughput: 107.65 MB/s
+Memory Usage: 1048576 bytes
+Iterations: 100
+Warmup Time: 2 seconds
+Measurement Time: 5 seconds
+
+AES-256-GCM Tests
+==================
+Operation: key_generation
+Data Size: 0 bytes
+Mean Time: 0.00 μs
+Median Time: 0.00 μs
+95th Percentile: 1.00 μs
+99th Percentile: 1.00 μs
+Min Time: 0.00 μs
+Max Time: 1.00 μs
+Throughput: inf ops/sec
+Memory Usage: 32 bytes
+Iterations: 1000
+Warmup Time: 2 seconds
+Measurement Time: 5 seconds
+
+Operation: encryption_64b
+Data Size: 64 bytes
+Mean Time: 2.00 μs
+Median Time: 2.00 μs
+95th Percentile: 2.00 μs
+99th Percentile: 2.00 μs
+Min Time: 1.00 μs
+Max Time: 3.00 μs
+Throughput: 500000 ops/sec
+Data Throughput: 30.52 MB/s
+Memory Usage: 80 bytes
+Iterations: 1000
+Warmup Time: 2 seconds
+Measurement Time: 5 seconds
+
+Operation: encryption_256b
+Data Size: 256 bytes
+Mean Time: 2.00 μs
+Median Time: 2.00 μs
+95th Percentile: 3.00 μs
+99th Percentile: 3.00 μs
+Min Time: 2.00 μs
+Max Time: 3.00 μs
+Throughput: 500000 ops/sec
+Data Throughput: 122.07 MB/s
+Memory Usage: 272 bytes
+Iterations: 1000
+Warmup Time: 2 seconds
+Measurement Time: 5 seconds
+
+Operation: encryption_1024b
+Data Size: 1024 bytes
+Mean Time: 7.00 μs
+Median Time: 7.00 μs
+95th Percentile: 8.00 μs
+99th Percentile: 15.00 μs
+Min Time: 6.00 μs
+Max Time: 91.00 μs
+Throughput: 142857 ops/sec
+Data Throughput: 139.51 MB/s
+Memory Usage: 1040 bytes
+Iterations: 1000
+Warmup Time: 2 seconds
+Measurement Time: 5 seconds
+
+Operation: encryption_4096b
+Data Size: 4096 bytes
+Mean Time: 22.00 μs
+Median Time: 20.00 μs
+95th Percentile: 25.00 μs
+99th Percentile: 39.00 μs
+Min Time: 20.00 μs
+Max Time: 130.00 μs
+Throughput: 45455 ops/sec
+Data Throughput: 177.56 MB/s
+Memory Usage: 4112 bytes
+Iterations: 1000
+Warmup Time: 2 seconds
+Measurement Time: 5 seconds
+
+Operation: encryption_16384b
+Data Size: 16384 bytes
+Mean Time: 84.00 μs
+Median Time: 75.00 μs
+95th Percentile: 104.00 μs
+99th Percentile: 218.00 μs
+Min Time: 75.00 μs
+Max Time: 407.00 μs
+Throughput: 11905 ops/sec
+Data Throughput: 186.01 MB/s
+Memory Usage: 16400 bytes
+Iterations: 1000
+Warmup Time: 2 seconds
+Measurement Time: 5 seconds
+
+Operation: encryption_65536b
+Data Size: 65536 bytes
+Mean Time: 331.00 μs
+Median Time: 311.00 μs
+95th Percentile: 411.00 μs
+99th Percentile: 499.00 μs
+Min Time: 297.00 μs
+Max Time: 584.00 μs
+Throughput: 3021 ops/sec
+Data Throughput: 188.82 MB/s
+Memory Usage: 65552 bytes
+Iterations: 1000
+Warmup Time: 2 seconds
+Measurement Time: 5 seconds
+
+Operation: encryption_262144b
+Data Size: 262144 bytes
+Mean Time: 1343.00 μs
+Median Time: 1248.00 μs
+95th Percentile: 1541.00 μs
+99th Percentile: 3602.00 μs
+Min Time: 1186.00 μs
+Max Time: 8115.00 μs
+Throughput: 745 ops/sec
+Data Throughput: 186.15 MB/s
+Memory Usage: 262160 bytes
+Iterations: 1000
+Warmup Time: 2 seconds
+Measurement Time: 5 seconds
+
+Operation: encryption_1048576b
+Data Size: 1048576 bytes
+Mean Time: 5342.00 μs
+Median Time: 5241.00 μs
+95th Percentile: 5946.00 μs
+99th Percentile: 8155.00 μs
+Min Time: 4753.00 μs
+Max Time: 27625.00 μs
+Throughput: 187 ops/sec
+Data Throughput: 187.20 MB/s
+Memory Usage: 1048592 bytes
+Iterations: 1000
+Warmup Time: 2 seconds
+Measurement Time: 5 seconds
+
+Operation: decryption_64b
+Data Size: 64 bytes
+Mean Time: 1.00 μs
+Median Time: 1.00 μs
+95th Percentile: 1.00 μs
+99th Percentile: 1.00 μs
+Min Time: 1.00 μs
+Max Time: 1.00 μs
+Throughput: 1000000 ops/sec
+Data Throughput: 61.04 MB/s
+Memory Usage: 64 bytes
+Iterations: 1000
+Warmup Time: 2 seconds
+Measurement Time: 5 seconds
+
+Operation: decryption_256b
+Data Size: 256 bytes
+Mean Time: 2.00 μs
+Median Time: 2.00 μs
+95th Percentile: 4.00 μs
+99th Percentile: 13.00 μs
+Min Time: 2.00 μs
+Max Time: 32.00 μs
+Throughput: 500000 ops/sec
+Data Throughput: 122.07 MB/s
+Memory Usage: 256 bytes
+Iterations: 1000
+Warmup Time: 2 seconds
+Measurement Time: 5 seconds
+
+Operation: decryption_1024b
+Data Size: 1024 bytes
+Mean Time: 8.00 μs
+Median Time: 7.00 μs
+95th Percentile: 14.00 μs
+99th Percentile: 24.00 μs
+Min Time: 5.00 μs
+Max Time: 84.00 μs
+Throughput: 125000 ops/sec
+Data Throughput: 122.07 MB/s
+Memory Usage: 1024 bytes
+Iterations: 1000
+Warmup Time: 2 seconds
+Measurement Time: 5 seconds
+
+Operation: decryption_4096b
+Data Size: 4096 bytes
+Mean Time: 20.00 μs
+Median Time: 19.00 μs
+95th Percentile: 21.00 μs
+99th Percentile: 38.00 μs
+Min Time: 19.00 μs
+Max Time: 100.00 μs
+Throughput: 50000 ops/sec
+Data Throughput: 195.31 MB/s
+Memory Usage: 4096 bytes
+Iterations: 1000
+Warmup Time: 2 seconds
+Measurement Time: 5 seconds
+
+Operation: decryption_16384b
+Data Size: 16384 bytes
+Mean Time: 77.00 μs
+Median Time: 74.00 μs
+95th Percentile: 83.00 μs
+99th Percentile: 116.00 μs
+Min Time: 74.00 μs
+Max Time: 165.00 μs
+Throughput: 12987 ops/sec
+Data Throughput: 202.92 MB/s
+Memory Usage: 16384 bytes
+Iterations: 1000
+Warmup Time: 2 seconds
+Measurement Time: 5 seconds
+
+Operation: decryption_65536b
+Data Size: 65536 bytes
+Mean Time: 313.00 μs
+Median Time: 299.00 μs
+95th Percentile: 390.00 μs
+99th Percentile: 453.00 μs
+Min Time: 296.00 μs
+Max Time: 634.00 μs
+Throughput: 3195 ops/sec
+Data Throughput: 199.68 MB/s
+Memory Usage: 65536 bytes
+Iterations: 1000
+Warmup Time: 2 seconds
+Measurement Time: 5 seconds
+
+Operation: decryption_262144b
+Data Size: 262144 bytes
+Mean Time: 1241.00 μs
+Median Time: 1200.00 μs
+95th Percentile: 1411.00 μs
+99th Percentile: 1527.00 μs
+Min Time: 1184.00 μs
+Max Time: 1654.00 μs
+Throughput: 806 ops/sec
+Data Throughput: 201.45 MB/s
+Memory Usage: 262144 bytes
+Iterations: 1000
+Warmup Time: 2 seconds
+Measurement Time: 5 seconds
+
+Operation: decryption_1048576b
+Data Size: 1048576 bytes
+Mean Time: 4907.00 μs
+Median Time: 4878.00 μs
+95th Percentile: 5272.00 μs
+99th Percentile: 5529.00 μs
+Min Time: 4747.00 μs
+Max Time: 5945.00 μs
+Throughput: 204 ops/sec
+Data Throughput: 203.79 MB/s
+Memory Usage: 1048576 bytes
+Iterations: 1000
+Warmup Time: 2 seconds
+Measurement Time: 5 seconds
+
+Kyber768 Tests
+===============
+Operation: key_generation
+Data Size: 0 bytes
+Mean Time: 69.00 μs
+Median Time: 67.00 μs
+95th Percentile: 75.00 μs
+99th Percentile: 112.00 μs
+Min Time: 66.00 μs
+Max Time: 163.00 μs
+Throughput: 14493 ops/sec
+Memory Usage: 3584 bytes
+Iterations: 1000
+Warmup Time: 2 seconds
+Measurement Time: 5 seconds
+
+Operation: encapsulation
+Data Size: 0 bytes
+Mean Time: 27.00 μs
+Median Time: 26.00 μs
+95th Percentile: 28.00 μs
+99th Percentile: 47.00 μs
+Min Time: 25.00 μs
+Max Time: 92.00 μs
+Throughput: 37037 ops/sec
+Memory Usage: 1120 bytes
+Iterations: 1000
+Warmup Time: 2 seconds
+Measurement Time: 5 seconds
+
+Operation: decapsulation
+Data Size: 0 bytes
+Mean Time: 30.00 μs
+Median Time: 29.00 μs
+95th Percentile: 34.00 μs
+99th Percentile: 39.00 μs
+Min Time: 29.00 μs
+Max Time: 113.00 μs
+Throughput: 33333 ops/sec
+Memory Usage: 32 bytes
+Iterations: 1000
+Warmup Time: 2 seconds
+Measurement Time: 5 seconds
+
+Operation: key_derivation
+Data Size: 0 bytes
+Mean Time: 0.00 μs
+Median Time: 0.00 μs
+95th Percentile: 0.00 μs
+99th Percentile: 0.00 μs
+Min Time: 0.00 μs
+Max Time: 0.00 μs
+Throughput: inf ops/sec
+Memory Usage: 32 bytes
+Iterations: 1000
+Warmup Time: 2 seconds
+Measurement Time: 5 seconds
+
+PERFORMANCE SUMMARY TABLE
+=========================
+Test | Operation | Data Size | Mean (μs) | Throughput (ops/sec) | Throughput (MB/s)
+-----|-----------|-----------|-----------|---------------------|------------------
+Kyber768 | key_generation | N/A | 69.00 | 14493 | N/A
+Kyber768 | encapsulation | N/A | 27.00 | 37037 | N/A
+Kyber768 | decapsulation | N/A | 30.00 | 33333 | N/A
+Kyber768 | key_derivation | N/A | 0.00 | inf | N/A
+Dilithium3 | key_generation | N/A | 74.00 | 13514 | N/A
+Dilithium3 | signing_64b | 64B | 111.00 | 9009 | 0.55
+Dilithium3 | signing_256b | 256B | 49.00 | 20408 | 4.98
+Dilithium3 | signing_1024b | 1KB | 110.00 | 9091 | 8.88
+Dilithium3 | signing_4096b | 4KB | 144.00 | 6944 | 27.13
+Dilithium3 | signing_16384b | 16KB | 125.00 | 8000 | 125.00
+Dilithium3 | signing_65536b | 64KB | 208.00 | 4808 | 300.48
+Dilithium3 | signing_262144b | 256KB | 700.00 | 1429 | 357.14
+Dilithium3 | signing_1048576b | 1MB | 2718.00 | 368 | 367.92
+Dilithium3 | verification_64b | 64B | 33.00 | 30303 | 1.85
+Dilithium3 | verification_256b | 256B | 35.00 | 28571 | 6.98
+Dilithium3 | verification_1024b | 1KB | 37.00 | 27027 | 26.39
+Dilithium3 | verification_4096b | 4KB | 44.00 | 22727 | 88.78
+Dilithium3 | verification_16384b | 16KB | 74.00 | 13514 | 211.15
+Dilithium3 | verification_65536b | 64KB | 190.00 | 5263 | 328.95
+Dilithium3 | verification_262144b | 256KB | 670.00 | 1493 | 373.13
+Dilithium3 | verification_1048576b | 1MB | 2477.00 | 404 | 403.71
+AES-256-GCM | key_generation | N/A | 0.00 | inf | N/A
+AES-256-GCM | encryption_64b | 64B | 2.00 | 500000 | 30.52
+AES-256-GCM | encryption_256b | 256B | 2.00 | 500000 | 122.07
+AES-256-GCM | encryption_1024b | 1KB | 7.00 | 142857 | 139.51
+AES-256-GCM | encryption_4096b | 4KB | 22.00 | 45455 | 177.56
+AES-256-GCM | encryption_16384b | 16KB | 84.00 | 11905 | 186.01
+AES-256-GCM | encryption_65536b | 64KB | 331.00 | 3021 | 188.82
+AES-256-GCM | encryption_262144b | 256KB | 1343.00 | 745 | 186.15
+AES-256-GCM | encryption_1048576b | 1MB | 5342.00 | 187 | 187.20
+AES-256-GCM | decryption_64b | 64B | 1.00 | 1000000 | 61.04
+AES-256-GCM | decryption_256b | 256B | 2.00 | 500000 | 122.07
+AES-256-GCM | decryption_1024b | 1KB | 8.00 | 125000 | 122.07
+AES-256-GCM | decryption_4096b | 4KB | 20.00 | 50000 | 195.31
+AES-256-GCM | decryption_16384b | 16KB | 77.00 | 12987 | 202.92
+AES-256-GCM | decryption_65536b | 64KB | 313.00 | 3195 | 199.68
+AES-256-GCM | decryption_262144b | 256KB | 1241.00 | 806 | 201.45
+AES-256-GCM | decryption_1048576b | 1MB | 4907.00 | 204 | 203.79
+File Operations | encrypt_file_64b | 64B | 133.00 | 7519 | 0.46
+File Operations | encrypt_file_256b | 256B | 150.00 | 6667 | 1.63
+File Operations | encrypt_file_1024b | 1KB | 143.00 | 6993 | 6.83
+File Operations | encrypt_file_4096b | 4KB | 168.00 | 5952 | 23.25
+File Operations | encrypt_file_16384b | 16KB | 328.00 | 3049 | 47.64
+File Operations | encrypt_file_65536b | 64KB | 776.00 | 1289 | 80.54
+File Operations | encrypt_file_262144b | 256KB | 2504.00 | 399 | 99.84
+File Operations | encrypt_file_1048576b | 1MB | 10343.00 | 97 | 96.68
+File Operations | decrypt_file_64b | 64B | 65.00 | 15385 | 0.94
+File Operations | decrypt_file_256b | 256B | 66.00 | 15152 | 3.70
+File Operations | decrypt_file_1024b | 1KB | 73.00 | 13699 | 13.38
+File Operations | decrypt_file_4096b | 4KB | 105.00 | 9524 | 37.20
+File Operations | decrypt_file_16384b | 16KB | 228.00 | 4386 | 68.53
+File Operations | decrypt_file_65536b | 64KB | 673.00 | 1486 | 92.87
+File Operations | decrypt_file_262144b | 256KB | 2422.00 | 413 | 103.22
+File Operations | decrypt_file_1048576b | 1MB | 9289.00 | 108 | 107.65
+
+RECOMMENDATIONS
+===============
+1. Performance Analysis: Review the detailed results above for performance insights
+2. Bottleneck Identification: Focus on operations with highest latency
+3. Optimization Opportunities: Target the slowest operations for improvement
+4. Memory Usage: Monitor memory consumption for large file operations
+5. Cross-Platform Testing: Compare results across different systems
+6. Security Validation: Ensure all cryptographic operations meet security requirements
+
+Report generated by Enclypt 2.0 System-Aware Benchmarking System
+Generated on: 2025-08-25T07:51:33.821618+00:00
